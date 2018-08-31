@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartIdiot</string>
+    <string name="user_features">用户功能</string>
+    <string name="beauty_pic">福利社区</string>
+    <string name="idiot_feature">智障功能</string>
+    <string name="we_chat_service">微信精选</string>
+    <string name="setting">设置</string>
+</resources>
