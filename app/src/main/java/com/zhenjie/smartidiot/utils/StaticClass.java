@@ -8,4 +8,8 @@ package com.zhenjie.smartidiot.utils;
  * 描述：存储静态常量
  */
 public class StaticClass {
+    public static final int HANDLER_SPLASH = 100001;
+    public static final String SHARE_IS_FIRST = "first";
+    public static final String BUGLY_APP_ID = "cbddd490e4";
+    public static final String BMOB_APPLICATION_ID = "ea279f7254d30731bc2bac477b6e3c57";
 }

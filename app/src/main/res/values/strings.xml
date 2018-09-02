@@ -1,8 +1,26 @@
 <resources>
     <string name="app_name">SmartIdiot</string>
-    <string name="user_features">用户功能</string>
+    <string name="user_features">个人中心</string>
     <string name="beauty_pic">福利社区</string>
     <string name="idiot_feature">智障功能</string>
     <string name="we_chat_service">微信精选</string>
     <string name="setting">设置</string>
+    <string name="guide_page">引导页</string>
+    <string name="enter_main_page">进入主页</string>
+    <string name="test">测试</string>
+    <string name="plz_input_user_name">请输入用户名</string>
+    <string name="plz_input_pass_word">请输入密码</string>
+    <string name="remember_pass_word">记住密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="forget_or_change_pass_word">忘记/更改密码</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="uer_name">用户名</string>
+    <string name="age">年龄</string>
+    <string name="about_in_register_page">简介</string>
+    <string name="pass_word">密码</string>
+    <string name="reenter">再输入一次</string>
+    <string name="email_address">邮箱</string>
+    <string name="reset_password">重置密码</string>
 </resources>

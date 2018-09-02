@@ -2,6 +2,11 @@ package com.zhenjie.smartidiot.application;
 
 import android.app.Application;
 
+import com.tencent.bugly.crashreport.CrashReport;
+import com.zhenjie.smartidiot.utils.StaticClass;
+
+import cn.bmob.v3.Bmob;
+
 /**
  * 文件名: BaseApplication
  * 创建者: Jack Yan
@@ -13,5 +18,9 @@ public class BaseApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+        //初始化bugly
+        CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, true);
+        //初始化Bmob
+        Bmob.initialize(this, StaticClass.BMOB_APPLICATION_ID);
     }
 }

@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initData() {
         mTitle = new ArrayList<>();
-        mTitle.add("服务管家");
-        mTitle.add("微信精选");
-        mTitle.add("福利社区");
-        mTitle.add("个人中心");
+        mTitle.add(getString(R.string.idiot_feature));
+        mTitle.add(getString(R.string.we_chat_service));
+        mTitle.add(getString(R.string.beauty_pic));
+        mTitle.add(getString(R.string.user_features));
         fragments = new ArrayList<>();
         fragments.add(new IdiotFragment());
         fragments.add(new WeChatFragment());
