@@ -19,7 +19,7 @@ public class BaseApplication extends Application{
     public void onCreate() {
         super.onCreate();
         //初始化bugly
-        CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, true);
+        CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, false);
         //初始化Bmob
         Bmob.initialize(this, StaticClass.BMOB_APPLICATION_ID);
     }

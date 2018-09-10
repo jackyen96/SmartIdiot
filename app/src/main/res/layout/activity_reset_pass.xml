@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/change_password"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_old_password"
+        android:hint="@string/old_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="@string/new_pass_word"
+        android:id="@+id/et_pass_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_reenter_pass_word"
+        android:hint="@string/reenter_pass_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:background="@drawable/button_bg"
+        android:id="@+id/bt_change_password"
+        android:text="@string/change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/forget_password"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="@string/email_address"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:background="@drawable/button_bg"
+        android:id="@+id/bt_forget_password"
+        android:text="@string/forget_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
