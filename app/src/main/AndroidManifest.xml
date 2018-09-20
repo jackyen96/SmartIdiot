@@ -45,7 +45,8 @@
             android:label="@string/setting" />
 
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
 
         <activity android:name=".activities.GuideActivity"

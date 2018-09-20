@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -13,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.zhenjie.smartidiot.MainActivity;
 import com.zhenjie.smartidiot.R;
 import com.zhenjie.smartidiot.entity.MyUser;
 import com.zhenjie.smartidiot.utils.ShareUtils;
@@ -103,6 +101,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     ShareUtils.deleteShare(LoginActivity.this, "password");
                                 }
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                finish();
                             } else {
                                 Toast.makeText(LoginActivity.this, "登录失败" + e.getErrorCode(), Toast.LENGTH_SHORT).show();
                             }

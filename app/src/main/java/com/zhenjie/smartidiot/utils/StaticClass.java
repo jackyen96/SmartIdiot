@@ -12,4 +12,5 @@ public class StaticClass {
     public static final String SHARE_IS_FIRST = "first";
     public static final String BUGLY_APP_ID = "cbddd490e4";
     public static final String BMOB_APPLICATION_ID = "ea279f7254d30731bc2bac477b6e3c57";
+    public static final String EXPRESS_API_KEY = "754d5b06daff2908d55c5ed41963e1b3";
 }

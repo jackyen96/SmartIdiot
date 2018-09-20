@@ -1,4 +1,4 @@
-package com.zhenjie.smartidiot;
+package com.zhenjie.smartidiot.activities;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
@@ -11,11 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.zhenjie.smartidiot.R;
 import com.zhenjie.smartidiot.activities.SettingActivity;
 import com.zhenjie.smartidiot.fragment.BeautyFragment;
 import com.zhenjie.smartidiot.fragment.IdiotFragment;
 import com.zhenjie.smartidiot.fragment.UserFragment;
 import com.zhenjie.smartidiot.fragment.WeChatFragment;
+import com.zhenjie.smartidiot.utils.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -111,5 +113,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, SettingActivity.class));
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void onBackPressed() {
+        //do nothing here
     }
 }

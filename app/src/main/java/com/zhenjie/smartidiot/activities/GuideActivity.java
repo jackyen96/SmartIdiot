@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.zhenjie.smartidiot.MainActivity;
 import com.zhenjie.smartidiot.R;
 
 import java.util.ArrayList;

@@ -21,6 +21,13 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -39,4 +46,5 @@ dependencies {
     implementation 'cn.bmob.android:bmob-sdk:3.6.3'
     //原型图像加载
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.kymjs.rxvolley:rxvolley:1.1.4'
 }

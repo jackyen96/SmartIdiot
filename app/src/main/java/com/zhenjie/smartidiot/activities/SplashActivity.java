@@ -1,8 +1,6 @@
 package com.zhenjie.smartidiot.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -10,14 +8,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.zhenjie.smartidiot.MainActivity;
 import com.zhenjie.smartidiot.R;
 import com.zhenjie.smartidiot.utils.ShareUtils;
 import com.zhenjie.smartidiot.utils.StaticClass;
 import com.zhenjie.smartidiot.utils.Utils;
 
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Type;
 
 /**
  * 文件名: SplashActivity
