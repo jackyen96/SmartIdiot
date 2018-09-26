@@ -59,7 +59,8 @@
             android:name=".activities.ResetPassActivity"
             android:label="@string/reset_password" />
         <activity android:name=".activities.CourierActivity" />
-        <activity android:name=".activities.LocatePhoneActivity"></activity>
+        <activity android:name=".activities.LocatePhoneActivity"/>
+        <activity android:name=".activities.WebViewActivity"/>
     </application>
 
 </manifest>

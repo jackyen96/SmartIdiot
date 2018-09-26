@@ -20,7 +20,6 @@ import com.zhenjie.smartidiot.R;
 import com.zhenjie.smartidiot.adapter.ChatListAdapter;
 import com.zhenjie.smartidiot.application.BaseApplication;
 import com.zhenjie.smartidiot.entity.ChatListData;
-import com.zhenjie.smartidiot.utils.L;
 import com.zhenjie.smartidiot.utils.StaticClass;
 
 import org.json.JSONArray;
@@ -51,7 +50,7 @@ public class IdiotFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_idiot, null);
         findView(v);
         btSend.setOnClickListener(this);
-        adapter = new ChatListAdapter(getActivity(),mList);
+        adapter = new ChatListAdapter(getActivity(), mList);
         mListView.setAdapter(adapter);
         BaseApplication application = (BaseApplication) getActivity().getApplication();
         userName = application.getUserName();
@@ -62,6 +61,10 @@ public class IdiotFragment extends Fragment implements View.OnClickListener {
         btSend = v.findViewById(R.id.btn_send);
         editText = v.findViewById(R.id.et_text);
         mListView = v.findViewById(R.id.mChatListView);
+        ChatListData mMsg = new ChatListData();
+        mMsg.setText("你好，我是智能Idiot");
+        mMsg.setType(ChatListAdapter.VALUE_LEFT_TEXT);
+        mList.add(mMsg);
     }
 
     @Override
@@ -75,7 +78,7 @@ public class IdiotFragment extends Fragment implements View.OnClickListener {
                     mMsg.setType(ChatListAdapter.VALUE_RIGHT_TEXT);
                     mList.add(mMsg);
                     adapter.notifyDataSetChanged();
-                    mListView.smoothScrollToPosition(mList.size()-1);
+                    mListView.smoothScrollToPosition(mList.size() - 1);
                     editText.setText("");
                     String url = "http://openapi.tuling123.com/openapi/api/v2";
                     HttpParams params = new HttpParams();
@@ -83,12 +86,12 @@ public class IdiotFragment extends Fragment implements View.OnClickListener {
                             "\t\"reqType\":0,\n" +
                             "    \"perception\": {\n" +
                             "        \"inputText\": {\n" +
-                            "            \"text\": \""+str+"\"\n" +
+                            "            \"text\": \"" + str + "\"\n" +
                             "        }\n" +
                             "    },\n" +
                             "    \"userInfo\": {\n" +
-                            "        \"apiKey\": \""+StaticClass.CHAT_ROBOT_KEY+"\",\n" +
-                            "        \"userId\": \""+userName+"\"\n" +
+                            "        \"apiKey\": \"" + StaticClass.CHAT_ROBOT_KEY + "\",\n" +
+                            "        \"userId\": \"" + userName + "\"\n" +
                             "    }\n" +
                             "}");
                     RxVolley.jsonPost(url, params, new HttpCallback() {
@@ -109,7 +112,7 @@ public class IdiotFragment extends Fragment implements View.OnClickListener {
                             bMsg.setType(ChatListAdapter.VALUE_LEFT_TEXT);
                             mList.add(bMsg);
                             adapter.notifyDataSetChanged();
-                            mListView.smoothScrollToPosition(mList.size()-1);
+                            mListView.smoothScrollToPosition(mList.size() - 1);
                         }
                     });
                 } else {

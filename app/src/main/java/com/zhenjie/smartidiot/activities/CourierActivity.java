@@ -1,6 +1,5 @@
 package com.zhenjie.smartidiot.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -27,7 +26,7 @@ import java.util.List;
 
 import rx.exceptions.OnErrorThrowable;
 
-public class CourierActivity extends AppCompatActivity implements View.OnClickListener {
+public class CourierActivity extends BaseActivity implements View.OnClickListener {
 
     private EditText et_name, et_num;
     private Button btn_look_up;

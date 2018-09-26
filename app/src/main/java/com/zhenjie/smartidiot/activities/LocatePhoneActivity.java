@@ -19,7 +19,7 @@ import com.zhenjie.smartidiot.utils.StaticClass;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class LocatePhoneActivity extends AppCompatActivity implements View.OnClickListener {
+public class LocatePhoneActivity extends BaseActivity implements View.OnClickListener {
 
     private EditText etPhone;
     private ImageView ivCompany;
