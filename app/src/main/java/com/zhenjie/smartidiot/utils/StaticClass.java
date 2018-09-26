@@ -13,4 +13,6 @@ public class StaticClass {
     public static final String BUGLY_APP_ID = "cbddd490e4";
     public static final String BMOB_APPLICATION_ID = "ea279f7254d30731bc2bac477b6e3c57";
     public static final String EXPRESS_API_KEY = "754d5b06daff2908d55c5ed41963e1b3";
+    public static final String PHONE_LOCATE_KEY = "cbfa037ae8c3a0064bbb8303a8b993f4";
+    public static final String CHAT_ROBOT_KEY = "6ef59cccc86d4cec9243738f20cf75ec";
 }

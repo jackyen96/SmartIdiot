@@ -42,4 +42,12 @@
     <string name="take_photo">拍照</string>
     <string name="pic_library">图库</string>
     <string name="cancel">取消</string>
+    <string name="courier">快递公司</string>
+    <string name="sf">sf</string>
+    <string name="express_serial_no">快递单号</string>
+    <string name="yd">yd</string>
+    <string name="look_up">查询</string>
+    <string name="request_failer">请求失败:</string>
+    <string name="input_error">输入有误</string>
+    <string name="plz_input_phone_num">请输入号码</string>
 </resources>

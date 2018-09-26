@@ -29,6 +29,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zhenjie.smartidiot.R;
+import com.zhenjie.smartidiot.activities.CourierActivity;
+import com.zhenjie.smartidiot.activities.LocatePhoneActivity;
 import com.zhenjie.smartidiot.activities.LoginActivity;
 import com.zhenjie.smartidiot.entity.MyUser;
 import com.zhenjie.smartidiot.utils.L;
@@ -57,7 +59,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
 
 
     private Button buttonLogout, buttonConfirmEdit, buttonCamera, buttonPicLibrary, buttonCancel;
-    private TextView tvEditUser;
+    private TextView tvEditUser, tvCourier,tvLocatePhone;
     private EditText etName, etGender, etAge, etDescription;
     private CircleImageView profile_image;
     private CustomDialog dialog;
@@ -76,9 +78,9 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_user, null);
         findView(v);
         String imgString = ShareUtils.getString(getActivity(), "image_profile", "");
-        if (!imgString.equals("")){
+        if (!imgString.equals("")) {
             byte[] byteArray = Base64.decode(imgString, Base64.DEFAULT);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
             profile_image.setImageBitmap(bitmap);
         }
         return v;
@@ -96,7 +98,10 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         etGender = v.findViewById(R.id.et_gender);
         etAge = v.findViewById(R.id.et_user_age);
         etDescription = v.findViewById(R.id.et_description);
-
+        tvCourier = v.findViewById(R.id.courier);
+        tvCourier.setOnClickListener(this);
+        tvLocatePhone = v.findViewById(R.id.tv_locate_phone);
+        tvLocatePhone.setOnClickListener(this);
         profile_image = v.findViewById(R.id.profile_image);
         profile_image.setOnClickListener(this);
 
@@ -194,6 +199,12 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.bt_cancel:
                 dialog.dismiss();
+                break;
+            case R.id.courier:
+                startActivity(new Intent(getActivity(), CourierActivity.class));
+                break;
+            case R.id.tv_locate_phone:
+                startActivity(new Intent(getActivity(),LocatePhoneActivity.class));
                 break;
         }
     }
@@ -315,8 +326,8 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         BitmapDrawable drawable = (BitmapDrawable) profile_image.getDrawable();
         Bitmap bitmap = drawable.getBitmap();
         ByteArrayOutputStream byStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG,80,byStream);
-        String mString = Base64.encodeToString(byStream.toByteArray(),Base64.DEFAULT);
-        ShareUtils.putString(getActivity(),"image_profile",mString);
+        bitmap.compress(Bitmap.CompressFormat.PNG, 80, byStream);
+        String mString = Base64.encodeToString(byStream.toByteArray(), Base64.DEFAULT);
+        ShareUtils.putString(getActivity(), "image_profile", mString);
     }
 }

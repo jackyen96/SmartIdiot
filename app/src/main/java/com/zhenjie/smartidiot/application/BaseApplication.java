@@ -15,6 +15,7 @@ import cn.bmob.v3.Bmob;
  * 描述：Application 的基类
  */
 public class BaseApplication extends Application{
+    private String userName;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -22,5 +23,13 @@ public class BaseApplication extends Application{
         CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, false);
         //初始化Bmob
         Bmob.initialize(this, StaticClass.BMOB_APPLICATION_ID);
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserName() {
+        return userName;
     }
 }

@@ -1,5 +1,6 @@
 package com.zhenjie.smartidiot.activities;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zhenjie.smartidiot.R;
+import com.zhenjie.smartidiot.application.BaseApplication;
 import com.zhenjie.smartidiot.entity.MyUser;
 import com.zhenjie.smartidiot.utils.ShareUtils;
 import com.zhenjie.smartidiot.view.CustomDialog;
@@ -76,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btn_login:
                 //获取输入框的值
-                String name = etName.getText().toString();
+                final String name = etName.getText().toString();
                 String password = etPassword.getText().toString();
                 if (!TextUtils.isEmpty(name) & !TextUtils.isEmpty(password)) {
                     //开始登陆，显示dialog
@@ -101,6 +103,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     ShareUtils.deleteShare(LoginActivity.this, "password");
                                 }
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                BaseApplication application = (BaseApplication) getApplication();
+                                application.setUserName(name);
                                 finish();
                             } else {
                                 Toast.makeText(LoginActivity.this, "登录失败" + e.getErrorCode(), Toast.LENGTH_SHORT).show();
